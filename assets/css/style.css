@@ -1,60 +1,41 @@
-* {
-    padding: 0;
+*,
+*::after,
+*::before {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: system-ui, Arial, Helvetica, sans-serif;
 }
-
-body {
-    min-height: 100vh;
-    background-color: blueviolet;
-}
-
-h1,
-h2,
-#score {
-    font-family: Arial, Helvetica, sans-serif;
-    color: aliceblue;
-}
-
-#memory-game {
+/* =============================================================== */
+#grid{
+    margin: auto;
     width: 500px;
     height: 500px;
-    margin: 10px auto 50px auto;
     display: flex;
     flex-wrap: wrap;
+    gap: 5px;
 }
-
-.memory-card {
-    width: calc(25% - 10px);
-    height: 33.333%;
+.memory-card{
+    width: calc(25% - 5px);
+    height: 33.33%;
     position: relative;
-    background-color: #b463ff;
-    margin: 5px;
-    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
     transform-style: preserve-3d;
+    transition: .4s;
+}
+.front-face,.back-face{
+  width: 100px;
+   height: 150px;
+   position: absolute;
+   backface-visibility: hidden;
 }
 
-.memory-card:active {
-    transform: scale(.95);
-    transition: .2s;
-}
-
-.front-face,
-.back-face {
-    width: 100%;
-    padding: 100%;
-    position: absolute;
-    padding: 20px;
-    backface-visibility: hidden;
-}
-
-.memory-card.flip {
+.memory-card.flip{
     transform: rotateY(180deg);
 }
-
-.front-face {
+.front-face{
     transform: rotateY(180deg);
-}
-.flip{
-    
 }
