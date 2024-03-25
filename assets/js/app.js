@@ -45,7 +45,7 @@ function matched() {
     fCard.removeEventListener('click', flipCard);
     sCard.removeEventListener('click', flipCard);
     possibleTest = false;
-    if (score == 6) alert('you are win');
+    win();
 }
 
 function notMatch() {
@@ -66,3 +66,10 @@ function removeFlip(card) {
     }, 5000);
 }
 
+function win() {
+    if (score == 6) {
+        setTimeout(() => {
+            alert('Congratulation you found them all')
+        }, 600);
+    }
+}

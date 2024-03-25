@@ -7,6 +7,12 @@
     font-family: system-ui, Arial, Helvetica, sans-serif;
 }
 /* =============================================================== */
+body{
+    background-color: #5151ff;
+}
+h1,h3,span {
+    color: aliceblue;
+}
 #grid{
     margin: auto;
     width: 500px;
@@ -22,9 +28,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aquamarine;
+    background-color: #7e7eff;
     transform-style: preserve-3d;
     transition: .4s;
+    border-radius: 7px;
 }
 .front-face,.back-face{
   width: 100px;
